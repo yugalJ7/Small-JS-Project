@@ -1,0 +1,43 @@
+body{
+  background-color: black;
+  color: white;
+}
+.grey_button{
+  background-color: rgb(40, 39, 39);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  padding: 15px 23px;
+  font-size: 25px;
+  margin-right: 5px;
+}
+.yellow_button{
+  background-color: #f89a0d;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  padding: 13px 23px;
+  font-size: 25px;
+  margin-right: 5px;
+}
+.result-css{
+  font-size: 45px;
+  margin: 5px;
+}
+.clear-button{
+  font-size: 15px;
+  background-color: rgb(40, 39, 39);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  padding: 20px 11px;
+  font-size: 16px;
+}
+.dot-button{
+  padding-right: 26px;
+  padding-left: 26px;
+}
+.add-button{
+  padding-right: 20px;
+  padding-left: 20px;
+}
