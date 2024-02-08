@@ -1,56 +1,23 @@
-const boomSound = new Audio('sounds/boom.wav');
-const clapSound = new Audio('sounds/clap.wav');
-const hihatSound = new Audio('sounds/hihat.wav');
+// Array.from convert all element contain .key class into an array
+const keys = Array.from(document.querySelectorAll(".key"));
+console.log(keys);
 
-const kickSound = new Audio('sounds/kick.wav');
-const openhatSound = new Audio('sounds/openhat.wav');
-const rideSound = new Audio('sounds/ride.wav');
+const keyCode = {
+  A: 65,
+  S: 83,
+  D: 68,
+  F: 70,
+  G: 71,
+  H: 72,
+  J: 74,
+  K: 75,
+  L: 76,
+};
 
-const snareSound = new Audio('sounds/snare.wav');
-const tinkSound = new Audio('sounds/tink.wav');
-const tomSound = new Audio('sounds/tom.wav');
+const playSound = (e) => {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  audio.currentTime = 0;
+  audio.play();
+};
 
-// document.querySelector('.musicSound')
-  document.body.addEventListener('keydown', (e) => {
-
-    switch(e.key){
-      case "a":
-        clapSound.play();
-        break;
-
-      case "s":
-        hihatSound.play();
-        break;
-
-      case "d":
-        kickSound.play();
-        break;
-      
-      case "f":
-        openhatSound.play();
-        break;
-
-      case "g":
-        boomSound.play();
-        break;
-
-      case "h":
-        rideSound.play();
-        break;
-
-      case "j":
-        snareSound.play();
-        break;
-
-      case "k":
-        tomSound.play();
-        break;
-
-      case "l":
-        tinkSound.play();
-        break;
-      
-      default:
-        break;
-    }
-  })
+window.addEventListener("keydown", playSound);

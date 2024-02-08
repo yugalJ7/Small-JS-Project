@@ -1,46 +1,53 @@
-body{
-  background-color: rgb(27, 27, 54);
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&family=Sacramento&display=swap");
+
+body {
+  background-color: #192965;
 }
 
-.heading{
+.heading {
   text-align: center;
 }
 
 .heading-content {
   color: rgb(251, 239, 190);
-  font-size: 50px;
-  font-family: "Arvo", cursive;
+  font-size: 2rem;
+  font-family: "Rock Salt", cursive;
 }
 
-.buttons {
+.heading-description {
+  color: rgb(251, 239, 190);
+  font-size: 3rem;
+  font-family: "Sacramento", cursive;
+  word-spacing: 3px;
+}
+
+.container {
+  perspective: 500px;
   display: flex;
   flex-direction: row;
-
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-
-  gap: 5px;
+  height: 40vh;
 }
 
-.button-style{
-  
-  background-color: rgb(35, 34, 34);
-  color: aliceblue;
-
-  border: 4px solid white;
-  border-radius: 5px;
-
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 1px 25px;
-  text-transform: uppercase;
+.alphabhet-css {
+  font-size: 7rem;
+  font-family: verdana;
+  font-weight: 700;
+  color: #f0efef;
+  transform: rotateY(45deg);
+  animation: rotateAlphabet 1s linear infinite;
+  text-shadow: 1px 1px 1px #bbcfff, 1px 2px 1px #bbcfff, 1px 3px 1px #bbcfff,
+    1px 4px 1px #bbcfff, 1px 5px 1px #bbcfff, 1px 6px 1px #bbcfff,
+    1px 7px 1px #bbcfff, 1px 8px 1px #bbcfff, 1px 9px 1px #bbcfff,
+    1px 10px 1px #bbcfff, 1px 18px 6px #faafff;
 }
 
-.button-style p{
-  color: violet;
-}
-
-.button-style h3{
-  font-size: 35px;
-  font-weight: 100;
+@keyframes rotateAlphabet {
+  from {
+    transform: rotateY(45deg);
+  }
+  to {
+    transform: rotateY(225deg);
+  }
 }
